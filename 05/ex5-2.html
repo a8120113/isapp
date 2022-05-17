@@ -10,12 +10,13 @@
     <script type="text/javascript" src="../osql.js"></script>
 
     <script>
+
+        jQuery(document).ready(function () {
+            doSelect();
+        });
+
         function button1Pressed() {
             doInsert();
-        }
-
-        function button2Pressed() {
-            doSelect();
         }
 
         async function doInsert() {
@@ -56,9 +57,8 @@
     <button onclick="button1Pressed()">tweet</button>
     <br>
     <p id="result1"></p>
-    <button onclick="button2Pressed()">X</button>
     <hr>
-    <p id="result2">xxxx</p>
+    <p id="result2"></p>
 
 </body>
 
