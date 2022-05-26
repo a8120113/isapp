@@ -19,7 +19,13 @@
             document.getElementById('welcome').innerHTML = 'ようこそ' + name + 'さん';
         }
 
-        function buttonPressed() {
+        function buttonPressed1() {
+            var name = sessionStorage.getItem('username');
+            location.href = 'tweet.html?username=' + name;
+        }
+
+
+        function buttonPressed2() {
             var id = sessionStorage.getItem('userid');
             location.href = 'update.html?userid=' + id;
         }
@@ -31,9 +37,10 @@
 <body>
     <h1>ユーザトップ</h1>
     <p id="welcome"></p>
-    <hr>
-    <button onclick="buttonPressed()">ボタン</button>
+    <button onclick="buttonPressed1()">ツイートページ</button>
 
+    <hr>
+    <button onclick="buttonPressed2()">ボタン</button>
 
 </body>
 
